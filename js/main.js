@@ -148,14 +148,51 @@ function loadInclude(elementId, file) {
             const element = document.getElementById(elementId);
             if (element) {
                 element.innerHTML = data;
+                
+                // Después de cargar el footer, asegurar que los eventos de conversión funcionen
+                if (elementId === 'footer-placeholder') {
+                    attachConversionTracking();
+                }
             }
         })
         .catch(error => console.log('Error loading include:', error));
 }
 
+// Función para adjuntar tracking a elementos cargados dinámicamente
+function attachConversionTracking() {
+    // Agregar tracking a enlaces de WhatsApp en el footer
+    const footerWhatsAppLinks = document.querySelectorAll('footer a[href*="wa.me"]');
+    footerWhatsAppLinks.forEach(link => {
+        if (!link.hasAttribute('onclick')) {
+            link.addEventListener('click', function() {
+                if (typeof trackConversion === 'function') {
+                    trackConversion();
+                }
+            });
+        }
+    });
+    
+    // Agregar tracking a enlaces telefónicos en el footer
+    const footerPhoneLinks = document.querySelectorAll('footer a[href^="tel:"]');
+    footerPhoneLinks.forEach(link => {
+        if (!link.hasAttribute('onclick')) {
+            link.addEventListener('click', function() {
+                if (typeof trackConversion === 'function') {
+                    trackConversion();
+                }
+            });
+        }
+    });
+}
+
 // WhatsApp Form Handler
 function sendWhatsAppMessage(event) {
     event.preventDefault();
+    
+    // Registrar conversión antes de enviar
+    if (typeof trackConversion === 'function') {
+        trackConversion();
+    }
     
     const name = document.getElementById('name').value;
     const phone = document.getElementById('phone').value;
@@ -166,6 +203,9 @@ function sendWhatsAppMessage(event) {
     const encodedMessage = encodeURIComponent(whatsappMessage);
     const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
     
-    window.open(whatsappURL, '_blank');
-    document.getElementById('whatsappForm').reset();
+    // Pequeño delay para asegurar que se registre la conversión
+    setTimeout(() => {
+        window.open(whatsappURL, '_blank');
+        document.getElementById('whatsappForm').reset();
+    }, 300);
 }
