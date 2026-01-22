@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmación de Cita - Dra. Juliana Alvarez</title>
+    <link rel="shortcut icon" href="/assets/logo.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            color: #2c3e50;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .confirmation-container {
+            background: white;
+            border-radius: 20px;
+            padding: 50px 40px;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+            border: 3px solid #00b4d8;
+            max-width: 550px;
+            width: 100%;
+            animation: slideIn 0.5s ease-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .success-icon {
+            font-size: 80px;
+            margin-bottom: 20px;
+            animation: bounce 1s ease-in-out;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+        
+        h1 {
+            color: #00b4d8;
+            font-size: 32px;
+            margin-bottom: 15px;
+            font-weight: 700;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .message {
+            font-size: 17px;
+            line-height: 1.7;
+            margin-bottom: 30px;
+            color: #555;
+        }
+
+        .service-info {
+            background: #f0f9ff;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+            border-left: 4px solid #00b4d8;
+        }
+
+        .service-info strong {
+            color: #00b4d8;
+            font-size: 18px;
+        }
+        
+        .countdown {
+            font-size: 20px;
+            color: #00b4d8;
+            font-weight: 600;
+            margin-bottom: 25px;
+            padding: 15px;
+            background: #f0f9ff;
+            border-radius: 10px;
+        }
+
+        .countdown-number {
+            font-size: 28px;
+            font-weight: 700;
+            color: #0077b6;
+        }
+        
+        .whatsapp-btn {
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            color: white;
+            padding: 18px 40px;
+            border: none;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 20px rgba(37, 211, 102, 0.3);
+        }
+        
+        .whatsapp-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(37, 211, 102, 0.4);
+        }
+
+        .whatsapp-btn:active {
+            transform: translateY(-1px);
+        }
+
+        .whatsapp-icon {
+            font-size: 24px;
+        }
+        
+        .manual-link {
+            font-size: 14px;
+            color: #666;
+            margin-top: 25px;
+        }
+        
+        .manual-link a {
+            color: #00b4d8;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .manual-link a:hover {
+            color: #0077b6;
+            text-decoration: underline;
+        }
+
+        .divider {
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #00b4d8, transparent);
+            margin: 30px 0;
+        }
+
+        @media (max-width: 600px) {
+            .confirmation-container {
+                padding: 40px 25px;
+            }
+
+            h1 {
+                font-size: 26px;
+            }
+
+            .success-icon {
+                font-size: 60px;
+            }
+
+            .whatsapp-btn {
+                padding: 15px 30px;
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="confirmation-container">
+        <div class="success-icon">✅</div>
+        <h1>¡Cita Agendada Exitosamente!</h1>
+        
+        <p class="message">
+            ¡Gracias por agendar tu cita con la <strong>Dra. Juliana Alvarez</strong>! 
+            Estamos emocionados de ayudarte a lograr la sonrisa que siempre has deseado.
+        </p>
+
+        <div class="service-info">
+            <strong id="serviceType">Servicio seleccionado</strong>
+        </div>
+
+        <div class="divider"></div>
+        
+        <div class="countdown">
+            Redirigiendo a WhatsApp en <span class="countdown-number" id="countdown">5</span> segundos...
+        </div>
+        
+        <a href="#" id="whatsappBtn" class="whatsapp-btn">
+            <span class="whatsapp-icon">📱</span>
+            Continuar a WhatsApp
+        </a>
+        
+        <div class="manual-link">
+            <p>¿No se abre WhatsApp automáticamente? <a href="#" id="manualLink">Haz clic aquí</a></p>
+        </div>
+    </div>
+
+    <script>
+        // Función para obtener parámetros de la URL
+        function getURLParameter(name) {
+            return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search) || [null, ''])[1].replace(/\+/g, '%20')) || null;
+        }
+        
+        // Obtener información de la reserva desde los parámetros URL
+        const serviceName = getURLParameter('service') || 'servicio odontológico';
+        
+        // Mostrar el servicio seleccionado
+        document.getElementById('serviceType').textContent = serviceName;
+        
+        // Crear mensaje personalizado para WhatsApp
+        function createWhatsAppMessage() {
+            const baseMessage = `¡Hola Dra. Juliana Alvarez! 😊
+
+Acabo de agendar una cita a través de su página web para: *${serviceName}*
+
+Me gustaría confirmar los detalles de mi cita y conocer cualquier información adicional que necesite antes de mi visita.
+
+¡Muchas gracias y espero con ansias mi cita! 🦷✨`;
+            
+            return encodeURIComponent(baseMessage);
+        }
+        
+        // Número de WhatsApp de la Dra. Juliana Alvarez
+        const whatsappNumber = '573103851118'; // Formato: código país + número sin +
+        
+        // Crear URL de WhatsApp
+        const whatsappURL = `https://wa.me/${whatsappNumber}?text=${createWhatsAppMessage()}`;
+        
+        // Asignar URL a los botones
+        document.getElementById('whatsappBtn').href = whatsappURL;
+        document.getElementById('manualLink').href = whatsappURL;
+        
+        // Contador regresivo y redirección automática
+        let timeLeft = 5;
+        const countdownElement = document.getElementById('countdown');
+        
+        const timer = setInterval(() => {
+            timeLeft--;
+            countdownElement.textContent = timeLeft;
+            
+            if (timeLeft <= 0) {
+                clearInterval(timer);
+                window.location.href = whatsappURL;
+            }
+        }, 1000);
+        
+        // Evento para botón manual
+        document.getElementById('whatsappBtn').addEventListener('click', function(e) {
+            e.preventDefault();
+            clearInterval(timer);
+            window.location.href = whatsappURL;
+        });
+        
+        document.getElementById('manualLink').addEventListener('click', function(e) {
+            e.preventDefault();
+            clearInterval(timer);
+            window.location.href = whatsappURL;
+        });
+    </script>
+</body>
+</html>
