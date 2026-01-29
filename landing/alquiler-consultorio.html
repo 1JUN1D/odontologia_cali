@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alquiler Consultorio Odontológico Cali 24/7 | Disponible Por Horas</title>
+    <meta name="description" content="Alquiler de consultorio odontológico en Cali disponible 24/7. Arrienda por horas cualquier día, incluye recepción, sala de espera y ultrasonido. Ideal para odontólogos.">
+    <meta name="keywords" content="alquiler consultorio cali, alquiler consultorio odontologico cali, alquiler de consultorios cali, alquiler de consultorios odontologicos en cali, alquiler de consultorios por horas en cali, arriendo consultorio odontologico cali">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="/assets/logo.png" type="image/x-icon">
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Google Ads Conversion Tracking -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17873142390"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'AW-17873142390');
+        
+        // Función de conversión
+        function trackConversion() {
+            gtag('event', 'conversion', {
+                'send_to': 'AW-17873142390/G7gnCKCcsOIbEPaEyspC'
+            });
+        }
+    </script>
+
+    <style>
+        /* Hero con Video */
+        .hero-consultorio {
+            min-height: 100vh;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--light-color) 100%);
+            display: flex;
+            align-items: center;
+            padding: 5rem 5%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-consultorio::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(232, 126, 140, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .hero-content-consultorio {
+            display: flex;
+            align-items: center;
+            gap: 5rem;
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-text-consultorio {
+            flex: 1;
+        }
+
+        .hero-text-consultorio h1 {
+            font-size: 3.5rem;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            color: var(--dark-text);
+        }
+
+        .hero-text-consultorio h1 .highlight {
+            color: var(--accent-color);
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            color: var(--medium-text);
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .hero-features-consultorio {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .feature-consultorio {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-size: 1.1rem;
+            color: var(--dark-text);
+        }
+
+        .feature-consultorio i {
+            color: var(--accent-color);
+            font-size: 1.5rem;
+            width: 30px;
+        }
+
+        .btn-whatsapp-hero {
+            display: inline-flex;
+            align-items: center;
+            gap: 1rem;
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            color: white;
+            padding: 1.2rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.3);
+        }
+
+        .btn-whatsapp-hero:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(37, 211, 102, 0.4);
+        }
+
+        .hero-video-container {
+            flex: 1;
+            max-width: 500px;
+        }
+
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 9/16;
+            border-radius: 30px;
+            overflow: hidden;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
+            background: var(--primary-color);
+        }
+
+        .video-wrapper video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .video-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--secondary-color) 0%, var(--accent-color) 100%);
+        }
+
+        .video-placeholder i {
+            font-size: 5rem;
+            color: white;
+            opacity: 0.8;
+        }
+
+        /* Sección de Disponibilidad */
+        .disponibilidad-section {
+            padding: 5rem 5%;
+            background: var(--white);
+        }
+
+        .section-header-consultorio {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 4rem;
+        }
+
+        .section-header-consultorio h2 {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            color: var(--dark-text);
+        }
+
+        .section-header-consultorio p {
+            font-size: 1.2rem;
+            color: var(--medium-text);
+        }
+
+        .disponibilidad-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .disponibilidad-card {
+            background: var(--light-color);
+            padding: 2.5rem 2rem;
+            border-radius: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .disponibilidad-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--accent-color);
+            box-shadow: 0 20px 40px rgba(232, 126, 140, 0.15);
+        }
+
+        .disponibilidad-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--accent-color) 0%, var(--dark-accent) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+        }
+
+        .disponibilidad-icon i {
+            font-size: 2.5rem;
+            color: white;
+        }
+
+        .disponibilidad-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--dark-text);
+        }
+
+        .disponibilidad-card p {
+            color: var(--medium-text);
+            line-height: 1.6;
+        }
+
+        /* Sección Incluye */
+        .incluye-section {
+            padding: 5rem 5%;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--light-color) 100%);
+        }
+
+        .incluye-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .incluye-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        .incluye-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--dark-text);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .incluye-card h3 i {
+            color: var(--accent-color);
+            font-size: 1.8rem;
+        }
+
+        .incluye-list {
+            list-style: none;
+        }
+
+        .incluye-list li {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid var(--light-color);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            color: var(--medium-text);
+        }
+
+        .incluye-list li:last-child {
+            border-bottom: none;
+        }
+
+        .incluye-list li i {
+            color: var(--accent-color);
+            font-size: 1.2rem;
+        }
+
+        /* Sección Ubicación */
+        .ubicacion-section {
+            padding: 5rem 5%;
+            background: var(--white);
+        }
+
+        .ubicacion-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .ubicacion-info h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--dark-text);
+        }
+
+        .ubicacion-details {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .ubicacion-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+        }
+
+        .ubicacion-item i {
+            color: var(--accent-color);
+            font-size: 1.8rem;
+            margin-top: 0.2rem;
+        }
+
+        .ubicacion-item div h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: var(--dark-text);
+        }
+
+        .ubicacion-item div p {
+            color: var(--medium-text);
+            line-height: 1.6;
+        }
+
+        .map-container {
+            width: 100%;
+            height: 450px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* CTA Final */
+        .cta-final-section {
+            padding: 6rem 5%;
+            background: linear-gradient(135deg, var(--dark-accent) 0%, var(--accent-color) 100%);
+            text-align: center;
+            color: white;
+        }
+
+        .cta-final-content h2 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-final-content p {
+            font-size: 1.3rem;
+            margin-bottom: 3rem;
+            opacity: 0.95;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn-whatsapp-large {
+            display: inline-flex;
+            align-items: center;
+            gap: 1.2rem;
+            background: white;
+            color: var(--accent-color);
+            padding: 1.5rem 3rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.3rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-whatsapp-large:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+        }
+
+        /* WhatsApp flotante */
+        .whatsapp-float {
+            position: fixed;
+            width: 65px;
+            height: 65px;
+            bottom: 30px;
+            right: 30px;
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            color: #FFF;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 35px;
+            box-shadow: 0 5px 20px rgba(37, 211, 102, 0.4);
+            z-index: 999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            animation: pulse 2s infinite;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.15);
+            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.6);
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                box-shadow: 0 5px 20px rgba(37, 211, 102, 0.4);
+            }
+            50% {
+                box-shadow: 0 5px 30px rgba(37, 211, 102, 0.7);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .hero-content-consultorio {
+                flex-direction: column;
+                text-align: center;
+                gap: 3rem;
+            }
+
+            .hero-video-container {
+                max-width: 400px;
+            }
+
+            .hero-features-consultorio {
+                align-items: center;
+            }
+
+            .ubicacion-content {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-text-consultorio h1 {
+                font-size: 2.8rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-text-consultorio h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+
+            .section-header-consultorio h2 {
+                font-size: 2.2rem;
+            }
+
+            .cta-final-content h2 {
+                font-size: 2.2rem;
+            }
+
+            .disponibilidad-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .incluye-content {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero-consultorio {
+                padding: 3rem 5%;
+            }
+
+            .hero-text-consultorio h1 {
+                font-size: 1.8rem;
+            }
+
+            .btn-whatsapp-hero,
+            .btn-whatsapp-large {
+                font-size: 1rem;
+                padding: 1rem 2rem;
+            }
+
+            .whatsapp-float {
+                width: 55px;
+                height: 55px;
+                font-size: 28px;
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- Hero Section con Video -->
+    <section class="hero-consultorio">
+        <div class="hero-content-consultorio">
+            <div class="hero-text-consultorio">
+                <h1>
+                    <span class="highlight">Alquiler de Consultorio</span><br>
+                    Odontológico en Cali
+                </h1>
+                <p class="hero-subtitle">
+                    Disponible 24/7 - Alquila por horas en cualquier momento. Incluye recepción, sala de espera y equipo especializado para tu práctica odontológica.
+                </p>
+
+                <div class="hero-features-consultorio">
+                    <div class="feature-consultorio">
+                        <i class="fas fa-clock"></i>
+                        <span><strong>Disponible las 24 horas</strong> - Cualquier día de la semana, incluso festivos</span>
+                    </div>
+                    <div class="feature-consultorio">
+                        <i class="fas fa-calendar-check"></i>
+                        <span><strong>Alquiler por horas</strong> - Total flexibilidad para tu agenda</span>
+                    </div>
+                    <div class="feature-consultorio">
+                        <i class="fas fa-check-circle"></i>
+                        <span><strong>Totalmente equipado</strong> - Todo listo para empezar a trabajar</span>
+                    </div>
+                </div>
+
+                <a href="https://wa.me/573124679959?text=Hola,%20me%20interesa%20el%20alquiler%20de%20consultorio%20odontológico%20en%20Cali" 
+                   class="btn-whatsapp-hero" 
+                   onclick="trackConversion();"
+                   target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                    Consultar Disponibilidad
+                </a>
+            </div>
+
+            <div class="hero-video-container">
+                <div class="video-wrapper">
+                    <!-- AQUÍ VA EL VIDEO DEL CONSULTORIO EN FORMATO REEL -->
+                    <video autoplay muted loop playsinline>
+                        <source src="/assets/consultorio.mp4" type="video/mp4">
+                    </video>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Disponibilidad 24/7 -->
+    <section class="disponibilidad-section">
+        <div class="section-header-consultorio">
+            <h2>Alquiler de Consultorios por Horas en Cali</h2>
+            <p>Flexibilidad total para tu práctica odontológica - Disponible cuando lo necesites</p>
+        </div>
+
+        <div class="disponibilidad-grid">
+            <div class="disponibilidad-card">
+                <div class="disponibilidad-icon">
+                    <i class="fas fa-moon"></i>
+                </div>
+                <h3>Horario Nocturno</h3>
+                <p>Atiende pacientes en horarios nocturnos. Ideal para profesionales con consultas en múltiples ubicaciones.</p>
+            </div>
+
+            <div class="disponibilidad-card">
+                <div class="disponibilidad-icon">
+                    <i class="fas fa-sun"></i>
+                </div>
+                <h3>Madrugadas y Mañanas</h3>
+                <p>Arriendo consultorio odontológico Cali desde muy temprano. Perfecto para urgencias y citas matutinas.</p>
+            </div>
+
+            <div class="disponibilidad-card">
+                <div class="disponibilidad-icon">
+                    <i class="fas fa-calendar-week"></i>
+                </div>
+                <h3>Fines de Semana</h3>
+                <p>Alquiler de consultorios odontológicos en Cali disponible sábados, domingos y festivos sin recargo.</p>
+            </div>
+
+            <div class="disponibilidad-card">
+                <div class="disponibilidad-icon">
+                    <i class="fas fa-business-time"></i>
+                </div>
+                <h3>Horario Comercial</h3>
+                <p>Disponible en horarios tradicionales de lunes a viernes para tu conveniencia profesional.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección ¿Qué Incluye? -->
+    <section class="incluye-section">
+        <div class="section-header-consultorio">
+            <h2>¿Qué Incluye el Alquiler del Consultorio?</h2>
+            <p>Todo lo que necesitas para ejercer tu práctica odontológica profesional</p>
+        </div>
+
+        <div class="incluye-content">
+            <div class="incluye-card">
+                <h3>
+                    <i class="fas fa-clinic-medical"></i>
+                    Espacios Completos
+                </h3>
+                <ul class="incluye-list">
+                    <li><i class="fas fa-check"></i> Consultorio odontológico totalmente equipado</li>
+                    <li><i class="fas fa-check"></i> Recepción profesional</li>
+                    <li><i class="fas fa-check"></i> Sala de espera cómoda para pacientes</li>
+                    <li><i class="fas fa-check"></i> Baño privado</li>
+                </ul>
+            </div>
+
+            <div class="incluye-card">
+                <h3>
+                    <i class="fas fa-tools"></i>
+                    Equipamiento
+                </h3>
+                <ul class="incluye-list">
+                    <li><i class="fas fa-check"></i> Unidad odontológica completa</li>
+                    <li><i class="fas fa-check"></i> Instrumental básico esterilizado</li>
+                    <li><i class="fas fa-check"></i> Sistema de iluminación LED</li>
+                    <li><i class="fas fa-check"></i> Ultrasonido para higiene oral (valor adicional)</li>
+                </ul>
+            </div>
+
+            <div class="incluye-card">
+                <h3>
+                    <i class="fas fa-shield-alt"></i>
+                    Servicios Incluidos
+                </h3>
+                <ul class="incluye-list">
+                    <li><i class="fas fa-check"></i> Servicios públicos incluidos</li>
+                    <li><i class="fas fa-check"></i> Internet WiFi de alta velocidad</li>
+                    <li><i class="fas fa-check"></i> Aire acondicionado</li>
+                    <li><i class="fas fa-check"></i> Seguridad y acceso controlado</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Ubicación -->
+    <section class="ubicacion-section">
+        <div class="section-header-consultorio">
+            <h2>Ubicación Estratégica en Cali</h2>
+            <p>Fácil acceso para ti y tus pacientes</p>
+        </div>
+
+        <div class="ubicacion-content">
+            <div class="ubicacion-info">
+                <h3>Encuentra Nuestro Consultorio</h3>
+                
+                <div class="ubicacion-details">
+                    <div class="ubicacion-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Dirección</h4>
+                            <p>Cl. 13 #68-64 Consultorio 204, Comuna 17, Cali, Valle del Cauca</p>
+                        </div>
+                    </div>
+
+                    <div class="ubicacion-item">
+                        <i class="fas fa-car"></i>
+                        <div>
+                            <h4>Acceso y Parqueadero</h4>
+                            <p>Zona con parqueaderos disponibles y excelente acceso por vías principales de Cali</p>
+                        </div>
+                    </div>
+
+                    <div class="ubicacion-item">
+                        <i class="fas fa-building"></i>
+                        <div>
+                            <h4>Referencia</h4>
+                            <p>Cerca de importantes centros comerciales y vías de acceso rápido</p>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="https://wa.me/573124679959?text=Hola,%20quiero%20conocer%20el%20consultorio%20en%20Cali" 
+                   class="btn-whatsapp-hero" 
+                   onclick="trackConversion();"
+                   target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                    Agendar Visita
+                </a>
+            </div>
+
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3982.8147082448654!2d-76.53839289999999!3d3.3953587!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e30a17af26e5c39%3A0xd358e03985282c31!2sOdontologia%20Cali%20%7C%20Dra%20Juliana%20Alvarez!5e0!3m2!1ses-419!2sco!4v1764614412761!5m2!1ses-419!2sco"  
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="cta-final-section">
+        <div class="cta-final-content">
+            <h2>¿Listo para Alquilar tu Consultorio?</h2>
+            <p>
+                Consulta disponibilidad y precios por WhatsApp. Te respondemos inmediatamente con toda la información que necesitas para tu alquiler de consultorio odontológico en Cali.
+            </p>
+            <a href="https://wa.me/573124679959?text=Hola,%20necesito%20información%20sobre%20el%20alquiler%20del%20consultorio%20odontológico" 
+               class="btn-whatsapp-large" 
+               onclick="trackConversion();"
+               target="_blank">
+                <i class="fab fa-whatsapp"></i>
+                Consultar Tarifas por WhatsApp
+            </a>
+        </div>
+    </section>
+
+    <!-- WhatsApp Flotante -->
+    <a href="https://wa.me/573124679959?text=Hola,%20me%20interesa%20el%20alquiler%20de%20consultorio%20odontológico" 
+       class="whatsapp-float" 
+       onclick="trackConversion();"
+       target="_blank"
+       aria-label="Contactar por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // Animación al hacer scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        document.querySelectorAll('section').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(30px)';
+            section.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
